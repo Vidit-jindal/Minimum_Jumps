@@ -16,3 +16,10 @@ onload = function () {
     refresh.onclick = function () {
         game.state.start("GameState");
     };
+    
+    var temptext = document.getElementById('temptext');
+    var solve = document.getElementById('solve');
+    const text = 'You\'ll receive a jumps array as input. Each index stores the maximum islands you can jump ahead from current island. ' +
+        'You need to find least number of moves needed to reach the last island and return jump to be taken on each island.<br>' +
+        'Can you solve it ?<br>';
+    const text2 = 'Click on solve to get solution';
