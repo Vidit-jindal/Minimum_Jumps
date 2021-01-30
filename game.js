@@ -23,3 +23,13 @@ onload = function () {
         'You need to find least number of moves needed to reach the last island and return jump to be taken on each island.<br>' +
         'Can you solve it ?<br>';
     const text2 = 'Click on solve to get solution';
+
+    const BootState = {
+        init : function () {
+            game.stage.backgroundColor = '#5c94fc';
+            game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        },
+        create : function () {
+            this.state.start("PreloadState");
+        }
+    };
