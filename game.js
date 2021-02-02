@@ -66,3 +66,7 @@ function createGame() {
         platforms_array = [];
         game.world.setBounds(0,0,game_length);
         game.physics.startSystem(Phaser.Physics.ARCADE);
+
+    for(let i=0;i<29;i++){
+            platforms_array.push(Math.floor(Math.random()*3)+1);
+        }
