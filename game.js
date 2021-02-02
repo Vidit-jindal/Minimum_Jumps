@@ -70,3 +70,10 @@ function createGame() {
     for(let i=0;i<29;i++){
             platforms_array.push(Math.floor(Math.random()*3)+1);
         }
+
+     clouds = game.add.group();
+        let change = 15;
+        for (let i = 70; i < game_length; i+= 240) {
+            clouds.create(i, change + ground_height - 8*unit, 'cloud');
+            change *= -1;
+        }
