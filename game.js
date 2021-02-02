@@ -58,3 +58,11 @@ game.state.add("BootState",BootState);
     game.state.add("PreloadState",PreloadState);
     game.state.add("GameState",GameState);
     game.state.start("BootState");
+
+function createGame() {
+        pos = 0;
+        firstTime = true;
+        onGround = true;
+        platforms_array = [];
+        game.world.setBounds(0,0,game_length);
+        game.physics.startSystem(Phaser.Physics.ARCADE);
