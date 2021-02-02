@@ -77,3 +77,6 @@ function createGame() {
             clouds.create(i, change + ground_height - 8*unit, 'cloud');
             change *= -1;
         }
+    
+     sun = game.add.sprite(16*unit, ground_height - 13.5*unit, 'sun');
+        game.physics.arcade.enable(sun);
