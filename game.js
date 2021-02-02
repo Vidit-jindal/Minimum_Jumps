@@ -44,3 +44,12 @@ onload = function () {
             game.load.image('wave', 'assets/wave.png');
             game.load.image('sea', 'assets/sea.png');
         },
+
+        const GameState = {
+        init: function() {
+            createGame();
+        },
+        update: function() {
+            updateState();
+        }
+    };
