@@ -80,3 +80,15 @@ function createGame() {
     
      sun = game.add.sprite(16*unit, ground_height - 13.5*unit, 'sun');
         game.physics.arcade.enable(sun);
+
+    platforms = game.add.group();
+        platforms.enableBody = true;
+        for (i = 0; i < 30; i++) {
+            let pos = i * 60 + 15;
+            let platform = platforms.create(pos, ground_height, 'tile');
+            platform.body.immovable = true;
+            game.add.text(pos + 10, ground_height-40, platforms_array[i], result_font);
+            if(i===29){
+                platform.scale.setTo(2,1);
+            }
+        }
