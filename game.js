@@ -92,3 +92,8 @@ function createGame() {
                 platform.scale.setTo(2,1);
             }
         }
+
+    const ground = game.add.tileSprite(0,ground_height+10, game_length, 6, 'wave');
+        game.physics.arcade.enable(ground);
+        ground.body.immovable = true;
+        game.add.tileSprite(0,ground_height+14, game_length, game.height, 'sea');
