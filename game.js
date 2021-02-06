@@ -97,3 +97,6 @@ function createGame() {
         game.physics.arcade.enable(ground);
         ground.body.immovable = true;
         game.add.tileSprite(0,ground_height+14, game_length, game.height, 'sea');
+    
+    flag = game.add.sprite(1780, ground_height-168, 'flag');
+        flag.animations.add('celebrate');
