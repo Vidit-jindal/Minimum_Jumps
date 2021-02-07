@@ -106,3 +106,6 @@ function createGame() {
         player.body.collideWorldBounds = true;
         player.body.velocity.x = move_step;
         player.body.enable = false;
+    
+    temptext.innerHTML = text + platforms_array.toString() + '<br>' + text2;
+    }
