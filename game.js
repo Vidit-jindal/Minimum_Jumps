@@ -100,3 +100,9 @@ function createGame() {
     
     flag = game.add.sprite(1780, ground_height-168, 'flag');
         flag.animations.add('celebrate');
+    
+    player = game.add.sprite(24, ground_height - 20, 'mario');
+        game.physics.arcade.enable(player);
+        player.body.collideWorldBounds = true;
+        player.body.velocity.x = move_step;
+        player.body.enable = false;
