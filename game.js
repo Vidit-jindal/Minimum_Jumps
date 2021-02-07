@@ -109,3 +109,7 @@ function createGame() {
     
     temptext.innerHTML = text + platforms_array.toString() + '<br>' + text2;
     }
+
+function updateState() {
+        game.physics.arcade.collide(player, platforms, groundOverlap);
+        game.camera.follow(player, Phaser.Camera.FOLLOW_TOPDOWN);
