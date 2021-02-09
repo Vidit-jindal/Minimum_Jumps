@@ -113,3 +113,16 @@ function createGame() {
 function updateState() {
         game.physics.arcade.collide(player, platforms, groundOverlap);
         game.camera.follow(player, Phaser.Camera.FOLLOW_TOPDOWN);
+
+     if (player.body.enable) {
+            if (onGround) {
+                onGround = false;
+                if(pos<moves.length) {
+                    const mul = Math.sqrt(moves[pos]);
+                    const vely = -fly_step * mul;
+                    const velx = move_step * mul;
+                    player.body.velocity.y = vely;
+                    player.body.velocity.x = velx;
+                    player.body.gravity.y = ( 2 * -vely * velx ) / ( 60 * moves[pos] + 1 );
+                    pos++;
+                
