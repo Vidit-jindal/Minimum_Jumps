@@ -125,4 +125,15 @@ function updateState() {
                     player.body.velocity.x = velx;
                     player.body.gravity.y = ( 2 * -vely * velx ) / ( 60 * moves[pos] + 1 );
                     pos++;
+                    } else{
+                    if(firstTime){
+                        flag.animations.play('celebrate', 5);
+                        firstTime = false;
+                        sun.body.enable = false;
+                        player.body.velocity.x = 0;
+                    }
+                    player.body.velocity.y = -fly_step;
+                    player.body.gravity.y = fly_step*4;
+                }
+            }
                 
