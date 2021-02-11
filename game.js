@@ -136,4 +136,12 @@ function updateState() {
                     player.body.gravity.y = fly_step*4;
                 }
             }
-                
+             
+         
+            if(sun.body.enable && player.body.x > 15*unit){
+                sun.body.velocity.x = player.body.velocity.x-15;
+            } else{
+                sun.body.velocity.x = 0;
+            }
+        }
+    }
