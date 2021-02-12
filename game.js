@@ -145,3 +145,6 @@ function updateState() {
             }
         }
     }
+function groundOverlap() {
+        onGround = true;
+    }
