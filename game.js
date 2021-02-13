@@ -155,3 +155,9 @@ solve.onclick = function () {
         player.body.enable = true;
     };
 };
+
+function solveProblem(input_arr){
+    let res = [];
+    for(let i=0;i<30;i++){
+        res.push([1000,-1]);
+    }
