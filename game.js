@@ -148,3 +148,10 @@ function updateState() {
 function groundOverlap() {
         onGround = true;
     }
+
+solve.onclick = function () {
+        moves = solveProblem(platforms_array);
+        temptext.innerText = temptext.innerText + "\n\nSolution\n" + moves;
+        player.body.enable = true;
+    };
+};
