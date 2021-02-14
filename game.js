@@ -172,3 +172,12 @@ function solveProblem(input_arr){
             }
         }
     }
+
+     let ans = [];
+    let end = 29;
+    while(end>0){
+        ans.push(res[end][1]);
+        end -= res[end][1];
+    }
+    return ans.reverse();
+}
